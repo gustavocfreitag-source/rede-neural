@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f172a">
+
+<title>C.R.I.A - Painel Médico</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/medico.css') }}">
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <div class="logo">
+        🩺 C.R.I.A Médico
+    </div>
+
+    <div class="user-box">
+
+        <strong id="nomeMedico">
+            Dr(a). Usuário
+        </strong>
+
+        <span>
+            Médico Responsável
+        </span>
+
+    </div>
+
+    <button class="menu-btn">
+        📋 Atualizar Painel
+    </button>
+
+    <button class="menu-btn" onclick="logout()">
+        🚪 Sair
+    </button>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <h1>
+            Painel de Triagens
+        </h1>
+
+        <div class="badge">
+            IA + TRIAGEM HUMANA
+        </div>
+
+    </div>
+
+    <!-- PACIENTES -->
+
+    <div class="pacientes" id="listaPacientes">
+
+        <!-- CARD -->
+
+        <div class="card">
+
+            <div class="card-top">
+
+                <div class="nome">
+                    João da Silva
+                </div>
+
+                <div class="tipo">
+                    Autoatendimento
+                </div>
+
+            </div>
+
+            <div class="info">
+
+                <div>
+                    <span class="label">
+                        Sintomas:
+                    </span>
+
+                    Dor no peito e falta de ar
+                </div>
+
+                <div>
+                    <span class="label">
+                        Tempo:
+                    </span>
+
+                    2 horas
+                </div>
+
+                <div>
+                    <span class="label">
+                        Análise IA:
+                    </span>
+
+                    Possível risco cardiovascular.
+                    Necessário avaliação imediata.
+                </div>
+
+                <div class="classificacao vermelho">
+                    🔴 Vermelho - Emergência
+                </div>
+
+            </div>
+
+            <div class="acoes">
+
+                <button class="btn btn-visualizar">
+                    👁 Visualizar
+                </button>
+
+                <button class="btn btn-audio">
+                    🔊 Ouvir IA
+                </button>
+
+                <button class="btn btn-finalizar">
+                    ✔ Finalizar
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="card">
+
+            <div class="card-top">
+
+                <div class="nome">
+                    Maria Oliveira
+                </div>
+
+                <div class="tipo">
+                    Técnico em Enfermagem
+                </div>
+
+            </div>
+
+            <div class="info">
+
+                <div>
+                    <span class="label">
+                        Pressão:
+                    </span>
+
+                    18x10
+                </div>
+
+                <div>
+                    <span class="label">
+                        Saturação:
+                    </span>
+
+                    91%
+                </div>
+
+                <div>
+                    <span class="label">
+                        Análise IA:
+                    </span>
+
+                    Saturação baixa.
+                    Monitoramento urgente recomendado.
+                </div>
+
+                <div class="classificacao laranja">
+                    🟠 Laranja - Muito Urgente
+                </div>
+
+            </div>
+
+            <div class="acoes">
+
+                <button class="btn btn-visualizar">
+                    👁 Visualizar
+                </button>
+
+                <button class="btn btn-audio">
+                    🔊 Ouvir IA
+                </button>
+
+                <button class="btn btn-finalizar">
+                    ✔ Finalizar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='js/medico.js') }}"></script>
+
+</body>
+</html>

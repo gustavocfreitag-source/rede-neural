@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta name="theme-color" content="#0f172a">
+
+    <title>
+        C.R.I.A - Sistema Inteligente de Triagem
+    </title>
+
+    <!-- FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🤖 C.R.I.A
+        </div>
+
+        <div class="user-box">
+
+            <strong id="nomeUsuario">
+                Usuário
+            </strong>
+
+            <span id="tipoUsuario">
+                Tipo
+            </span>
+
+        </div>
+
+        <button
+            class="menu-btn"
+            id="btnNovaTriagem"
+        >
+            + Nova Triagem
+        </button>
+
+        <button
+            class="menu-btn sair-btn"
+            id="btnLogout"
+        >
+            Sair
+        </button>
+
+    </aside>
+
+    <!-- CONTAINER -->
+
+    <main class="chat-container">
+
+        <!-- HEADER -->
+
+        <header class="chat-header">
+
+            <div class="header-title">
+                Sistema Inteligente de Triagem
+            </div>
+
+            <div
+                class="badge"
+                id="modoBadge"
+            >
+                AUTOATENDIMENTO
+            </div>
+
+        </header>
+
+        <!-- CHAT -->
+
+        <section
+            class="chat-messages"
+            id="chat"
+        >
+
+            <!-- MENSAGENS -->
+
+        </section>
+
+        <!-- INPUT -->
+
+        <footer class="input-area">
+
+            <div class="input-box">
+
+                <button
+                    id="btnRecord"
+                    type="button"
+                    class="record-btn"
+                    aria-label="Gravar áudio"
+                >
+                    🎙
+                </button>
+
+                <input
+                    type="text"
+                    id="input"
+                    placeholder="Digite sua resposta..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="btnEnviar"
+                    type="button"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+    <!-- JS -->
+    <script
+        src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+
+</body>
+</html>
