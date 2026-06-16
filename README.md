@@ -27,6 +27,6 @@ PI/
 
 Médicos autorizados para testar (adicione a seu CPF):
 
-12345678901 - Dr. João Silva
+45317828791 - Dr. João Silva
 98765432100 - Dra. Maria Santos
 55555555555 - Dr. Pedro Costa

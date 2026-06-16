@@ -6,16 +6,15 @@
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#f4f7fb;
+    background:#f8fafc; /* Fundo gelo limpo */
     display:flex;
     height:100vh;
 }
 
-/* SIDEBAR */
-
+/* SIDEBAR - Verde-Azulado (Teal) Cirúrgico */
 .sidebar{
     width:270px;
-    background:#0f172a;
+    background:#0f766e; 
     color:white;
     padding:20px;
     display:flex;
@@ -26,10 +25,20 @@ body{
 .logo{
     font-size:24px;
     font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-img{
+    width:32px;
+    height:32px;
+    object-fit:cover;
+    border-radius:6px;
 }
 
 .user-box{
-    background:#1e293b;
+    background:#115e59; /* Tom mais escuro para destaque */
     padding:15px;
     border-radius:12px;
 }
@@ -41,23 +50,41 @@ body{
     opacity:0.8;
 }
 
+/* BOTÃO DA SIDEBAR - Principal (Branco com alto contraste e efeito de elevação) */
 .menu-btn{
     padding:12px;
     border:none;
     border-radius:10px;
-    background:#2563eb;
-    color:white;
+    background:#ffffff; 
+    color:#0f766e; 
+    font-weight:700;
     cursor:pointer;
-    font-weight:600;
-    transition:0.3s;
+    transition:all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .menu-btn:hover{
-    background:#1d4ed8;
+    background:#f8fafc;
+    transform: translateY(-2px); 
+}
+
+/* BOTÃO DE SAIR - Estilo Ghost (Transparente com contorno) */
+.sair-btn{
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+    box-shadow: none;
+    font-weight: 500;
+}
+
+.sair-btn:hover{
+    background: rgba(220, 38, 38, 0.15); 
+    color: #fca5a5; 
+    border-color: #fca5a5;
+    transform: none; 
 }
 
 /* CHAT */
-
 .chat-container{
     flex:1;
     display:flex;
@@ -67,7 +94,7 @@ body{
 .chat-header{
     padding:18px;
     background:white;
-    border-bottom:1px solid #ddd;
+    border-bottom:1px solid #e2e8f0;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -76,6 +103,7 @@ body{
 .header-title{
     font-size:20px;
     font-weight:600;
+    color: #0f172a;
 }
 
 .chat-messages{
@@ -97,78 +125,99 @@ body{
 }
 
 .user-message{
-    background:#2563eb;
+    background:#0891b2; /* Azul Médico / Ciano */
     color:white;
     margin-left:auto;
 }
 
 .ai-message{
     background:white;
-    border:1px solid #ddd;
+    border:1px solid #e2e8f0;
+    color: #334155;
 }
 
 .input-area{
     padding:15px;
     background:white;
-    border-top:1px solid #ddd;
+    border-top:1px solid #e2e8f0;
 }
 
 .input-box{
     display:flex;
-    align-items:center;
-    border:1px solid #ccc;
+    align-items:stretch;
+    border:1px solid #cbd5e1;
     border-radius:30px;
     overflow:hidden;
-    gap:8px;
+    gap:0;
+    background: white;
 }
 
+/* BOTÃO GRAVAR - Verde Esmeralda */
 .record-btn{
     width:48px;
     min-width:48px;
     border:none;
-    background:#10b981;
+    background:#059669; 
     color:white;
     font-size:18px;
     cursor:pointer;
     outline:none;
     transition:0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .record-btn.recording{
     background:#dc2626;
+    color:white;
 }
 
 .record-btn:hover{
-    background:#0ea472;
+    background:#047857;
 }
 
 .input-box input{
     flex:1;
     border:none;
-    padding:14px;
+    padding:14px 14px 14px 20px; /* Recuo à esquerda para afastar da borda */
     outline:none;
     font-size:15px;
+    background: transparent;
+    color: #0f172a;
 }
 
-.input-box button{
+/* BOTÃO ENVIAR - Verde Esmeralda com linha divisória sutil */
+.input-box button#btnEnviar{
     width:60px;
     border:none;
-    background:#2563eb;
+    border-left: 1px solid rgba(255, 255, 255, 0.2); 
+    background:#059669; 
     color:white;
     cursor:pointer;
     font-size:18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
 }
 
+.input-box button#btnEnviar:hover{
+    background: #047857;
+}
+
+/* BADGE */
 .badge{
-    background:#10b981;
-    color:white;
+    background:#e0f2fe;
+    color:#0369a1;
+    border: 1px solid #7dd3fc;
     padding:5px 10px;
     border-radius:20px;
     font-size:12px;
+    font-weight: 600;
 }
 
 /* AUDIO */
-
 .audio-controls{
     display:flex;
     gap:10px;
@@ -179,88 +228,33 @@ body{
     padding:8px 14px;
     border:none;
     border-radius:8px;
-    background:#2563eb;
+    background:#0891b2;
     color:white;
     cursor:pointer;
     transition:0.3s;
 }
 
 .audio-btn:hover{
-    background:#1d4ed8;
+    background:#0e7490;
 }
 
 @media (max-width: 900px) {
-
-    body{
-        flex-direction:column;
-        min-height:100vh;
-    }
-
-    .sidebar{
-        width:100%;
-        flex-direction:row;
-        flex-wrap:wrap;
-        align-items:center;
-        justify-content:space-between;
-        padding:15px;
-        gap:10px;
-    }
-
-    .user-box{
-        width:100%;
-        margin:0;
-        padding:12px;
-    }
-
-    .menu-btn{
-        flex:1;
-        min-width:130px;
-    }
-
-    .chat-container{
-        width:100%;
-    }
-
-    .chat-header{
-        flex-wrap:wrap;
-        gap:10px;
-    }
-
-    .chat-messages{
-        padding:15px;
-    }
-
-    .message{
-        max-width:100%;
-    }
-
-    .input-box{
-        flex-direction:column;
-    }
-
-    .input-box input{
-        font-size:14px;
-    }
-
-    .input-box button{
-        width:100%;
-        border-radius:0 0 30px 30px;
-        margin-top:10px;
-    }
+    body{ flex-direction:column; min-height:100vh; }
+    .sidebar{ width:100%; flex-direction:row; flex-wrap:wrap; align-items:center; justify-content:space-between; padding:15px; gap:10px; }
+    .user-box{ width:100%; margin:0; padding:12px; }
+    .menu-btn{ flex:1; min-width:130px; }
+    .chat-container{ width:100%; }
+    .chat-header{ flex-wrap:wrap; gap:10px; }
+    .chat-messages{ padding:15px; }
+    .message{ max-width:100%; }
+    .input-box{ flex-direction: row; align-items: stretch; }
+    .input-box input{ font-size:14px; padding: 12px 12px 12px 16px; }
+    .input-box button#btnEnviar{ width: 50px; border-radius: 0; margin-top: 0; }
+    .record-btn { width: 44px; min-width: 44px; }
 }
 
 @media (max-width: 600px) {
-
-    .sidebar{
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    .menu-btn{
-        width:100%;
-    }
-
-    .badge{
-        width:auto;
-    }
+    .sidebar{ flex-direction:column; align-items:stretch; }
+    .menu-btn{ width:100%; }
+    .badge{ width:auto; }
 }

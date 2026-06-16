@@ -6,7 +6,8 @@
 
 body{
     font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#0f172a,#1d4ed8);
+    /* Gradiente moderno entre as cores institucionais (Teal Cirúrgico para Verde Esmeralda) */
+    background:linear-gradient(135deg, #0f766e, #059669);
     height:100vh;
     display:flex;
     justify-content:center;
@@ -25,13 +26,24 @@ body{
     text-align:center;
     font-size:32px;
     font-weight:700;
-    color:#1d4ed8;
+    color:#0f766e; 
     margin-bottom:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-img{
+    width:40px;
+    height:40px;
+    object-fit:cover;
+    border-radius:8px;
 }
 
 .subtitulo{
     text-align:center;
-    color:#666;
+    color:#64748b;
     margin-bottom:25px;
 }
 
@@ -44,23 +56,23 @@ label{
     margin-bottom:6px;
     font-size:14px;
     font-weight:600;
+    color: #334155;
 }
 
-input,
-select{
+input, select{
     width:100%;
     padding:12px;
-    border:1px solid #ccc;
+    border:1px solid #cbd5e1;
     border-radius:10px;
     outline:none;
     font-size:15px;
     transition:0.3s;
+    color: #0f172a;
 }
 
-input:focus,
-select:focus{
-    border-color:#2563eb;
-    box-shadow:0 0 0 3px rgba(37,99,235,0.15);
+input:focus, select:focus{
+    border-color:#059669;
+    box-shadow:0 0 0 3px rgba(5, 150, 105, 0.15);
 }
 
 button{
@@ -68,7 +80,7 @@ button{
     padding:14px;
     border:none;
     border-radius:12px;
-    background:#2563eb;
+    background:#059669; /* Verde Esmeralda */
     color:white;
     font-size:16px;
     font-weight:600;
@@ -77,7 +89,7 @@ button{
 }
 
 button:hover{
-    background:#1d4ed8;
+    background:#047857;
 }
 
 .erro{
@@ -89,7 +101,8 @@ button:hover{
 
 .sucesso{
     margin-top:15px;
-    color:#16a34a;
+    color:#059669; 
     text-align:center;
     font-size:14px;
+    font-weight: 600;
 }

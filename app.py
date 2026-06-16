@@ -34,7 +34,7 @@ MAX_MSG_LEN = 500
 # ==========================================
 
 MEDICOS_AUTORIZADOS = {
-    "03768364070": "gustavo",
+    "45317828791": "medico 1",
     "98765432100": "Dra. Maria Santos",
     "55555555555": "Dr. Pedro Costa"
 }
